@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+
+  # Data App (REST consumer, displays web page)
+  consumer-app:
+    image: fraunhoferaisec/example-server:${EXAMPLE_TAG:-develop}
+    ports:
+      - "8081:8081"
+    networks:
+      - provider-internal
+
+  # Sensor data provider
+  provider-app:
+    image: fraunhoferaisec/example-client:${EXAMPLE_TAG:-develop}
+    networks:
+      - provider-internal
+
+networks:
+  provider-internal:
+    driver: bridge
+
