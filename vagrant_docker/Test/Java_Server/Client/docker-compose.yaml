@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+  # Data App (REST consumer, displays web page)
+  demo.client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9900:9900"
+    #depends_on:
+    #  - demo.server
+    networks:
+      - provider-internal
+networks:
+  provider-internal:
+    name: provider-internal
+    driver: bridge
+

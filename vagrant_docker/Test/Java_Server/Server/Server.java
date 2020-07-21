@@ -29,8 +29,8 @@ public class Server {
             //create ObjectOutputStream object
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             //write object to Socket
-            oos.writeObject("Hi Client "+message);
-            //close resources
+            oos.writeObject("Temp "+ Math.random() * 10);
+            //close resource
             ois.close();
             oos.close();
             socket.close();
