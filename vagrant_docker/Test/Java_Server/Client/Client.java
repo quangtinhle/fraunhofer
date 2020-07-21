@@ -17,7 +17,7 @@ import java.net.UnknownHostException;
             ObjectInputStream ois = null;
             for(int i=0; i<5;i++){
                 //establish socket connection to server
-                socket = new Socket("localhost",8080);
+                socket = new Socket("demo.server",8080);
                 //write to socket using ObjectOutputStream
                 oos = new ObjectOutputStream(socket.getOutputStream());
                 System.out.println("Sending request to Socket Server");

@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   # Data App (REST consumer, displays web page)
   demo.server:
@@ -6,7 +6,7 @@ services:
       context: ./Server/
       dockerfile: Dockerfile
     ports:
-      - "9090:80"
+      - "9090:8080"
     networks:
       - provider-internal
 
@@ -22,5 +22,6 @@ services:
       - provider-internal
 networks:
   provider-internal:
+    name: provider-internal
     driver: bridge
 
