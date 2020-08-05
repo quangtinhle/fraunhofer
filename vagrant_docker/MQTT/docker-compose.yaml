@@ -1,0 +1,34 @@
+version: '3.5'
+services:
+  # example.server simualieren
+  example.server:
+    build:
+      context: ./example-server/
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - example.client
+    networks:
+      - provider-internal
+      # example-client simulieren
+  example.client:
+    build:
+      context: ./example-client/
+      dockerfile: Dockerfile
+    ports:
+      - "9900:8080"
+    depends_on:
+      - mqtt-broker
+    networks:
+      - provider-internal
+       # Mosquitto MQTT broker
+  mqtt-broker:
+    image: eclipse-mosquitto:latest
+    networks:
+      - provider-internal
+networks:
+  provider-internal:
+    name: provider-internal
+    driver: bridge
+
