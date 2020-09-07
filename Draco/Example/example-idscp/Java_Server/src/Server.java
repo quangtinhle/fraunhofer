@@ -45,7 +45,7 @@ public class Server {
                     int temp = (int) (Math.random() * 10 + 10);
 
                     System.out.println("Sending temperature measurement (" + temp + "º) ...");
-                    client.publish(TEMP_TOPIC, new MqttMessage(("211," + temp).getBytes()));
+                    client.publish(TEMP_TOPIC, new MqttMessage(("Temp," + temp).getBytes()));
                 } catch (MqttException e) {
                     e.printStackTrace();
                 }

@@ -498,3 +498,133 @@ ount Point.
 [[0;32m  OK  [0m] Started Network Name Resolution.
 [[0;32m  OK  [0m] Reached target Host and Network Name Lookups.
 [[0;32m  OK  [0m] Reached target Network.
+[[0;32m  OK  [0m] Started Wait for Network to be Configured.
+         Starting Initial cloud-init job (metadata service crawler)...
+[   30.566750] cloud-init[755]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~18.04.1 running 'init' at Mon, 07 Sep 2020 07:36:52 +0000. Up 30.37 seconds.
+[   30.588167] cloud-init[755]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
+[   30.605826] cloud-init[755]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   30.624206] cloud-init[755]: ci-info: | Device |  Up  |           Address           |      Mask     | Scope  |     Hw-Address    |
+[   30.640440] cloud-init[755]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   30.656297] cloud-init[755]: ci-info: | enp0s3 | True |          10.0.2.15          | 255.255.255.0 | global | 02:de:13:0c:aa:f5 |
+[   30.672884] cloud-init[755]: ci-info: | enp0s3 | True |  fe80::de:13ff:fe0c:aaf5/64 |       .       |  link  | 02:de:13:0c:aa:f5 |
+[   30.688518] cloud-init[755]: ci-info: | enp0s8 | True |         192.168.1.10        | 255.255.255.0 | global | 08:00:27:f0:8c:6f |
+[   30.705134] cloud-init[755]: ci-info: | enp0s8 | True | fe80::a00:27ff:fef0:8c6f/64 |       .       |  link  | 08:00:27:f0:8c:6f |
+[   30.720834] cloud-init[755]: ci-info: |   lo   | True |          127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[   30.736337] cloud-init[755]: ci-info: |   lo   | True |           ::1/128           |       .       |  host  |         .         |
+[[0;32m  OK  [0m] Started Initial cloud-init job (metadata service crawler).
+[   30.756947] cloud-init[755]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   30.784528] [cloud-init[0;32m  OK  [0m[755]: ] ci-info: ++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++Reached target Cloud-config availability.
+
+[[0;32m  OK  [0m] Reached target System Initialization.[   30.808099] cloud-init[755]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+[   30.808198] cloud-init[755]: ci-info: | Route | Destination | Gateway  |     Genmask     | Interface | Flags |
+
+[   30.808240] cloud-init[755]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+[[0;32m  OK  [0m] Started Discard unused blocks once a week.
+[   30.860103] cloud-init[755]: ci-info: |   0   |   0.0.0.0   | 10.0.2.2 |     0.0.0.0     |   enp0s3  |   UG  |
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+[   30.889228] cloud-init[755]: ci-info: |   1   |   10.0.2.0  | 0.0.0.0  |  255.255.255.0  |   enp0s3  |   U   |
+[[0;32m  OK  [0m] Started ACPI Events Check.
+[[   30.920940] [0;32m  OK  [0mcloud-init] [755]: Reached target Paths.ci-info: |   2   |   10.0.2.2  | 0.0.0.0  | 255.255.255.255 |   enp0s3  |   UH  |
+
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[   31.492349] cloud-init[755]: ci-info: |   3   | 192.168.1.0 | 0.0.0.0  |  255.255.255.0  |   enp0s8  |   U   |
+         Starting LXD - unix socket.
+         Starting Socket activation for snappy daemon.
+[[   31.526129] [0;32m  OK  [0mcloud-init[755]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+] Started Daily Cleanup of Temporary Directories.
+[   31.556212] cloud-init[755]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[   31.588998] cloud-init[755]: ci-info: +-------+-------------+---------+-----------+-------+
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[   31.612366] cloud-init[755]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[[0;32m  OK  [0m] Listening on Open-iSCSI iscsid Socket.
+[   31.636966] cloud-init[755]: ci-info: +-------+-------------+---------+-----------+-------+
+[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
+[   31.668372] cloud-init[755]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[[0;32m  OK  [0m] Started Message of the Day.
+[[   31.687142] [0;32m  OK  [0mcloud-init] [755]: Reached target Timers.
+ci-info: |   2   |  fe80::/64  |    ::   |   enp0s8  |   U   |
+         [   31.724356] Starting Docker Socket for the API.cloud-init
+[755]: ci-info: |   4   |    local    |    ::   |   enp0s3  |   U   |
+[[0;32m  OK  [0m] Reached target Network is Online.
+[   31.741015] cloud-init[755]: ci-info: |   5   |    local    |    ::   |   enp0s8  |   U   |
+[[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
+[   31.772271] cloud-init[755]: ci-info: |   6   |   ff00::/8  |    ::   |   enp0s3  |   U   |
+[[0;32m  OK  [0m] Reached target Remote File Systems.
+[   31.784731] cloud-init[755]: ci-info: |   7   |   ff00::/8  |    ::   |   enp0s8  |   U   |
+         Starting Availability of block devices...
+[   31.820876] cloud-init[755]: ci-info: +-------+-------------+---------+-----------+-------+
+[[0;32m  OK  [0m] Listening on LXD - unix socket.
+[[0;32m  OK  [0m] Listening on Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on Docker Socket for the API.
+[[0;32m  OK  [0m] Started Availability of block devices.
+[[0;32m  OK  [0m] Reached target Sockets.
+[[0;32m  OK  [0m] Reached target Basic System.
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
+         Starting Dispatcher daemon for systemd-networkd...
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+         Starting Pollinate to seed the pseudo random number generator...
+         Starting Virtualbox guest utils...
+         Starting Snap Daemon...
+         Starting LSB: Record successful boot for GRUB...
+[[0;32m  OK  [0m] Started Deferred execution scheduler.
+         Starting Permit User Sessions...
+[[0;32m  OK  [0m] Started irqbalance daemon.
+         Starting LXD - container startup/shutdown...
+         Starting containerd container runtime...
+         Starting Accounts Service...
+         Starting Login Service...
+         Starting System Logging Service...
+[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
+         Starting LSB: automatic crash report generation...
+[[0;32m  OK  [0m] Started Dispatcher daemon for systemd-networkd.
+[[0;32m  OK  [0m] Started System Logging Service.
+[[0;32m  OK  [0m] Started Permit User Sessions.
+[[0;32m  OK  [0m] Started containerd container runtime.
+[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Started Login Service.
+[[0;32m  OK  [0m] Started Unattended Upgrades Shutdown.
+         Starting Authorization Manager...
+         Starting Docker Application Container Engine...
+         Starting Hold until boot process finishes up...
+         Starting Terminate Plymouth Boot Screen...
+[[0;32m  OK  [0m] Started Hold until boot process finishes up.
+[[0;32m  OK  [0m] Started Terminate Plymouth Boot Screen.
+[[0;32m  OK  [0m] Started Virtualbox guest utils.
+[[0;32m  OK  [0m] Started Authorization Manager.
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Started LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Started Accounts Service.
+         Starting Set console scheme...
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Started Set console scheme.
+[[0;32m  OK  [0m] Created slice system-getty.slice.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Started Pollinate to seed the pseudo random number generator.
+         Starting OpenBSD Secure Shell server...
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Started Snap Daemon.
+         Starting Wait until snapd is fully seeded...
+[[0;32m  OK  [0m] Started Wait until snapd is fully seeded.
+         Starting Apply the settings specified in cloud-config...
+[[0;32m  OK  [0m] Created slice User Slice of vagrant.
+         Starting User Manager for UID 1000...
+[[0;32m  OK  [0m] Started Session 1 of user vagrant.
+[[0;32m  OK  [0m] Started User Manager for UID 1000.
+[   34.284685] cloud-init[1463]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~18.04.1 running 'modules:config' at Mon, 07 Sep 2020 07:36:56 +0000. Up 34.12 seconds.
+[[0;32m  OK  [0m] Started Apply the settings specified in cloud-config.
+[[0;32m  OK  [0m] Started Docker Application Container Engine.
+[[0;32m  OK  [0m] Reached target Multi-User System.
+[[0;32m  OK  [0m] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+         Starting Execute cloud user/final scripts...
+[[0;32m  OK  [0m] Started Update UTMP about System Runlevel Changes.
+[   35.626361] cloud-init[1725]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~18.04.1 running 'modules:final' at Mon, 07 Sep 2020 07:36:58 +0000. Up 35.49 seconds.
+[   35.644308] cloud-init[1725]: Cloud-init v. 20.2-45-g5f7825e2-0ubuntu1~18.04.1 finished at Mon, 07 Sep 2020 07:36:58 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 35.61 seconds
+[[0;32m  OK  [0m] Started Execute cloud user/final scripts.
+[[0;32m  OK  [0m] Reached target Cloud-init target.
+
+Ubuntu 18.04.5 LTS ubuntu-bionic ttyS0
+
+ubuntu-bionic login: 
