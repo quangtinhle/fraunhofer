@@ -23,7 +23,7 @@
     <route id="sendTemp">
       <!-- Alternative MQTT client, requires camel-mqtt feature in karaf-features-ids/build.gradle! -->
       <!--<from uri="mqtt:temp?host=tcp://mqtt-broker:1883&amp;subscribeTopicName=ids-example-010/temp"/>-->
-      <from uri="paho:ids-example-010/temp?brokerUrl=tcp://192.168.2.103:1883"/>
+      <from uri="paho:ids-example-010/temp?brokerUrl=tcp://mqtt-broker:1883"/>
       <convertBodyTo type="java.lang.String"/>
       <log message="Got temperature ${body}"/>
       <to

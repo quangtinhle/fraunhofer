@@ -37,13 +37,16 @@ services:
   # Mosquitto MQTT broker
   mqtt-broker:
     image: eclipse-mosquitto:latest
+    ports:
+      - 1883:1883
     networks:
       - provider-internal
+
 
   # Sensor data provider
   provider-app:
     build:
-      context: ./Client/
+      context: ./Java_Client/
       dockerfile: Dockerfile
     networks:
       - provider-internal

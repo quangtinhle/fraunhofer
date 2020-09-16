@@ -1,0 +1,16 @@
+version: '3'
+services:
+  # Data App (REST consumer, displays web page)
+  java.client:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - provider-internal
+
+networks:
+  provider-internal:
+    driver: bridge
+
