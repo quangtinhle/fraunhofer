@@ -34,11 +34,11 @@
                 <simple>Message at $simple{date:now:yyyy-MM-dd HH:mm:ss}</simple>
             </setBody>
             <log message="Sending message body &quot;${body}&quot;..."/>
-            <to uri="idsclient://consumer-core:9292/?sslContextParameters=#clientSslContext&amp;attestation=0" />
+            <to uri="idsclient://consumer-core:9292/" />
         </route>
 
         <route id="receiveTemp">
-            <from uri="idsserver://0.0.0.0:9292/?sslContextParameters=#serverSslContext&amp;attestation=0"/>
+            <from uri="idsserver://0.0.0.0:9292/"/>
             <log message="Received via IDS protocol: ${body}"/>
         </route>
 

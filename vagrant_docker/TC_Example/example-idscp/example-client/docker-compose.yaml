@@ -1,0 +1,45 @@
+version: '3.5'
+services:
+  # example.server simualieren
+  # TPM simulator
+
+  ids-tpmsim-provider:
+    image: fraunhoferaisec/tpmsim:${EXAMPLE_TAG:-develop}
+    volumes:
+      # Always extract a "clean state" for our TPM simulator to prevent DA lockout issues
+      - ../tpmsim/tpmsim_data.tar:/tpmsim_data.tar
+    networks:
+      - provider-internal
+  
+  provider-core:
+    image: fraunhoferaisec/trusted-connector-core:${EXAMPLE_TAG:-develop}
+    tty: true
+    stdin_open: true
+    volumes:
+      - ../log/:/root/log/
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./system.properties:/root/etc/system.properties
+      - ../tpmsim/rootCA.crt:/root/etc/rootca-cert.pem
+      - ../cert-stores/provider-keystore.p12:/root/etc/provider-keystore.p12
+      - ../cert-stores/truststore.p12:/root/etc/truststore.p12
+      - ./example-provider-routes.xml:/root/deploy/example-provider-routes.xml
+    environment:
+      - TPM_HOST=ids-tpmsim-provider
+  mqtt-broker:
+    image: eclipse-mosquitto:latest
+    networks:
+      - provider-internal
+  
+  provider-app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    networks:
+      - provider-internal
+       # Mosquitto MQTT broker
+  
+networks:
+  provider-internal:
+    name: provider-internal
+    driver: bridge
+

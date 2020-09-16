@@ -28,11 +28,13 @@ services:
     # Enable this lines for debugging or UI access from localhost
 #    ports:
 #      - "5005:5005"
-#      - "8181:8181"
+#      - "8181:8181"^^
 #      - "8443:8443"
     networks:
       - ids-wide
       - provider-internal
+    extra_hosts:
+      - "consumer-core:192.168.1.20"
 
   # Mosquitto MQTT broker
   mqtt-broker:
@@ -42,7 +44,12 @@ services:
 
   # Sensor data provider
   provider-app:
-    image: fraunhoferaisec/example-client:${EXAMPLE_TAG:-develop}
+    build:
+      context: ./example-client/
+      dockerfile: Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./example-client:/app
     networks:
       - provider-internal
 
